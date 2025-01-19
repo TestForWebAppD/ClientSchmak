@@ -169,7 +169,7 @@ export const Header = () => {
                 <ul id="nav" className="w-full absolute top-[0] bg-Manhattan flex-col items-center">
                     {['Home', 'Breeds', 'All Kitty', 'Community'].map((item) => (
                         <li key={item} className="text-BlackOlive py-3 w-full text-center transition-all hover:bg-Manhattan">
-                            <Link className="w-full bg-transparent" to={`/${item.split(" ")}`}>{item}</Link>
+                            <Link className="w-full bg-transparent" to={`/${item.replaceAll(" ", "")}`}>{item}</Link>
                         </li>
                     ))}
                 </ul>
